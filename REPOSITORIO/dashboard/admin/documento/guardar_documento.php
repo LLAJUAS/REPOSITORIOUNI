@@ -1,5 +1,5 @@
 <?php
-include('conexion.php');
+include('../../../includes/conexion.php');
 $conexion = obtenerConexion();
 
 // Recoger datos del formulario

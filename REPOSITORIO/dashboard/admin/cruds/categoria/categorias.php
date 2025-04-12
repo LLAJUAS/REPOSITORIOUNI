@@ -1,5 +1,5 @@
 <?php
-require '../../documento/conexion.php';
+require '../../../../includes/conexion.php';
 $conn = obtenerConexion();
 
 // CREAR o ACTUALIZAR

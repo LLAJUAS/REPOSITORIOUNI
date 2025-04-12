@@ -1,5 +1,5 @@
 <?php
-include('conexion.php');
+include('../../../includes/conexion.php');
 $conexion = obtenerConexion();
 
 $id = isset($_GET['id']) ? intval($_GET['id']) : null;

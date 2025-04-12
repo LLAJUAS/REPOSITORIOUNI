@@ -1,5 +1,5 @@
 <?php
-include('conexion.php');
+include('../../../includes/conexion.php');
 $conexion = obtenerConexion();
 
 // Obtener el tipo de área seleccionado (si existe)
