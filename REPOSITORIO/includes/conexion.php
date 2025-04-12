@@ -6,8 +6,7 @@ function obtenerConexion() {
         $port = 3306;
         $database = 'unifranz_db';
         $username = 'root';
-        $password = ''; /*(ponen su conexión en el caso que tengan)
-*/
+        $password = 'jesus123';
         $conexion = new mysqli($host, $username, $password, $database, $port);
         if ($conexion->connect_error) {
             die("Error de conexión: " . $conexion->connect_error);
