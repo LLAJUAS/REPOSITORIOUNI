@@ -1,0 +1,250 @@
+body {
+    background-color: rgb(252, 246, 246);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 110px;
+    padding: 0px 30px;
+    margin-bottom: 30px;
+}
+
+.TITULOYHERRAMIENTAS {
+    display: flex;              /* Usamos flexbox para alinear los elementos */
+    justify-content: space-between; /* Alinea a la izquierda el título y a la derecha la barra */
+    align-items: center;        /* Alinea verticalmente los elementos */
+    width: 100%;
+}
+
+.titulo-con-linea {
+    display: inline-block;
+    padding: 10px 25px;
+    position: relative;
+    color: #f96302;
+    margin-bottom: 30px;
+}
+
+.titulo-con-linea:before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    background-color: #f96302;
+}
+
+.titulo-con-linea h1 {
+    font-size: 35px;
+    font-family: "Archivo Black", sans-serif;
+    margin: 0;
+    padding-left: 10px;
+}
+
+/* Estilo para la barra de herramientas */
+.barra-de-herramientas {
+    display: flex;
+    gap: 15px;  /* Espaciado entre los elementos */
+}
+
+/* Contenedor de los select */
+.select-container {
+    position: relative;
+    width: 200px; /* Ajusta el tamaño según sea necesario */
+}
+
+/* Estilo para los select */
+.barra-de-herramientas select {
+    padding: 10px 1rem;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #fffefe;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    outline: 2px solid #FEBF00;
+    outline-offset: 3px;
+    transition: 0.25s;
+    width: 100%;
+}
+
+/* Estilo para el label dentro del select */
+.barra-de-herramientas select option {
+    font-size: 14px;
+    color: #333;
+}
+
+.barra-de-herramientas select:focus {
+    outline-offset: 5px;
+    background-color:#fbf5e1;
+}
+
+/* Estilo para el buscador */
+.input {
+    border-radius: 10px;
+    outline: 2px solid #FEBF00;
+    border: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #e2e2e2;
+    outline-offset: 3px;
+    padding: 10px 1rem;
+    transition: 0.25s;
+    width: 200px;
+}
+
+.input:focus {
+    outline-offset: 5px;
+    background-color: #fff;
+}
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    border-radius: 40px;
+    padding: 20px;
+    transition: transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Fondo SVG */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='10' y='10' width='20' height='20' fill='%23ffffff22'/%3E%3Crect x='50' y='50' width='30' height='30' fill='%23ffffff22'/%3E%3Crect x='70' y='10' width='15' height='15' fill='%23ffffff22'/%3E%3C/svg%3E");
+    opacity: 0.7;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card-icon {
+    background: rgb(179, 178, 178);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 20px;
+    border: 6px solid;
+}
+
+.card-icon i {
+    font-size: 30px;
+    color: inherit;
+}
+
+.card-content {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: white;
+}
+
+/* Variantes de color */
+.card-orange {
+    background-color: #f96302;
+}
+
+.card-orange .card-icon {
+    border-color: #f96302;
+}
+
+.card-pink {
+    background-color: #d72638;
+}
+
+.card-pink .card-icon {
+    border-color: #d72638;
+}
+
+.card-blue {
+    background-color: #0077b6;
+}
+
+.card-blue .card-icon {
+    border-color: #0077b6;
+}
+
+.card-green {
+    background-color: #20B292;
+}
+
+.card-green .card-icon {
+    border-color: #20B292;
+}
+
+/* En tu archivo categorias.css */
+.card-active {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #2c3e50;
+}
+
+.card-active .card-content h3 {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* Transición suave para el efecto */
+.card {
+    transition: all 0.3s ease;
+}
+.no-results {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+    color: #666;
+    grid-column: 1 / -1;
+}
+.btn-borrar-filtros {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-borrar-filtros:hover {
+    background-color: #c0392b;
+}
+
